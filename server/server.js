@@ -19,10 +19,9 @@ const server = http.createServer(app);
 
 // ✅ allowed origins (frontend URLs)
 const allowedOrigins = [
-  "http://localhost:5173",                            // local dev
-  // "https://your-frontend-domain.vercel.app",       // ⬅️ add real Vercel URL here later
+  "http://localhost:5173",                       // local dev
+  "https://real-time-chat-green.vercel.app",    // ✅ final Vercel URL
 ];
-
 // CORS for normal HTTP requests
 app.use(
   cors({
