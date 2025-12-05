@@ -20,7 +20,10 @@ const Chat = () => {
   useEffect(() => {
     if (!user?._id) return;
 
-    const s = io("http://localhost:5000");
+   const s = io("https://real-time-chat-backend-28xj.onrender.com", {
+  withCredentials: true,
+});
+
     setSocket(s);
 
     s.emit("user_connected", user._id);
